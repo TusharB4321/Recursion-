@@ -1,0 +1,50 @@
+
+
+package DataStructure.Recursion;
+
+//Print number from 5 to  1 using Recursion
+//print number from 1 to 5
+
+public class RecursionQ1 {
+    public static void printNum(int n){
+
+        if(n==0){
+            return;
+        }
+        System.out.println(n);
+        printNum(n-1);
+    }
+    public static void main(String[] args) {
+        printNum(5);
+
+    }
+}
+
+
+package DataStructure.Recursion;
+
+// Print the sum of n natural numbers
+
+/* Recursion Krte time Sbse Imp Steps
+
+1. Main Fun se kya pass kre i.e (1,5,0); starting parameters ki value
+2. Base Cond kya rakhe  i.e i==n  (sum print)
+3. Inner fun me Kam kya kre  ..Calculate Sum (iss Qs me hame sum ko print krna hai)
+ */
+public class RecursionQ2 {
+    public static void printSum(int i,int n,int sum){
+
+        if(i==n){
+            sum+=i;
+            System.out.println(sum);
+            return;
+        }
+        sum +=i;
+        printSum(i+1,n,sum);
+
+    }
+    public static void main(String[] args) {
+        printSum(1,5,0);
+
+    }
+}
